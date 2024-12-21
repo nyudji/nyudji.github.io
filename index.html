@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Amelia Portfolio</title>
+    <link rel="stylesheet" href="style.css"> <!-- Seu CSS original -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        /* Apenas para garantir que o header e o menu não sumam */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        .main-container {
+            padding-top: 80px; /* Ajuste o valor conforme necessário para evitar sobreposição com o menu fixo */
+        }
+        section {
+            padding: 100px 20px; /* Aumente o padding para não sobrepor o conteúdo */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <a style="color: white; font-size: 21px;">NYUDJI</a>
+                <span>Portifolio</span>
+            </div>
+            <div class="links">
+                <!-- Links com rolagem suave -->
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#home" onclick="scrollToSection('home')">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#sobremim" onclick="scrollToSection('sobre')">Sobre mim</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#projects" onclick="scrollToSection('projects')">Projetos</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#resume" onclick="scrollToSection('resume')">CV</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home" onclick="scrollToSection('home')">Sobre</a>
+                <a href="#sobremim" onclick="scrollToSection('sobre')">Sobre</a>
+                <a href="#projects" onclick="scrollToSection('projects')">Projetos</a>
+                <a href="#resume" onclick="scrollToSection('resume')">CV</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Home -->
+    <section id="home">
+        <div class="main-container">
+            <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                <!-- <img src="main.png" alt="" style="max-width: 75%; height: auto;"> -->
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Prazer, <span>Nicolas Yudji</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">Áreas: <span></span></div>
+                <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, perferendis quas consectetur possimus maxime consequatur cupiditate eos dolorum molestias praesentium error exercitationem rem labore illo, in dolor, odio corporis excepturi?</p>
+                <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                    <a href="https://github.com/nyudji" ><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:knyudji@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/nyudji/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.credly.com/users/nyudji"><i class="fa fa-certificate"></i></a>
+                </div>
+                <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
+                    <a href="#resume"><button>Ir ao CV</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Seção Sobre -->
+     <section id="sobremim">
+        <div class="sobre-container">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>Project 1</h3>
+                <p>Description of Project 1</p>
+            </div>
+            <div class="project-item">
+                <h3>Project 2</h3>
+                <p>Description of Project 2</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Seção Projects -->
+    <section id="projects">
+        <div class="projects-container">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>Project 1</h3>
+                <p>Description of Project 1</p>
+            </div>
+            <div class="project-item">
+                <h3>Project 2</h3>
+                <p>Description of Project 2</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contact -->
+    <section id="resume">
+        <div class="resume-container">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me through my email or social media links.</p>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset:0});
+
+        // Função para rolar suavemente para a seção
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                window.scrollTo({
+                    top: section.offsetTop - 70, // Ajusta o top para não sobrepor o menu
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Função para abrir o menu hamburger
+        function hamburg() {
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.transform = "translateY(0px)";
+        }
+
+        // Função para fechar o menu hamburger
+        function cancel() {
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.transform = "translateY(-500px)";
+        }
+    </script>
+</body>
+</html>
