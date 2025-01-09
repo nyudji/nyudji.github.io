@@ -3,7 +3,8 @@
 Nyudji Portifolio Responsivo usando HTML, CSS, and JavaScript.
 
 ## Demo
-![image](https://github.com/user-attachments/assets/2bc7e976-42ff-4cf2-8155-6fda297bf856)
+![image](https://github.com/user-attachments/assets/3dda73c4-caaf-47a5-969d-0f0a408c951e)
+
 
 
 ## Contact
