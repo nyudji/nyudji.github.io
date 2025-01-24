@@ -1,9 +1,9 @@
-# Personal Portfolio
+# Portifólio Pessoal
 
-Nyudji Portifolio Pessoal usando HTML, CSS, PHP e JavaScript.
+Nyudji Portifólio Pessoal usando HTML, CSS e JavaScript.
 
 ## Demo
-![image](https://github.com/user-attachments/assets/3dda73c4-caaf-47a5-969d-0f0a408c951e)
+![image](https://github.com/user-attachments/assets/d753c814-3176-4623-9111-c5302c1bac73)
 
 
 
