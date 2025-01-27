@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Projetos - NYUDJI Portifol</title>
+  <title>Projeto IOT - NYUDJI Portifolio</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -36,7 +36,7 @@
   ======================================================== -->
 </head>
 
-<body class="portfolio-page">
+<body class="portfolio-details-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -69,8 +69,8 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Projetos</h1>
-              <p class="mb-0">Estes são meus projetos para mostrar um pouco do meu desenvolvimento</p>
+              <h1>Detalhes do Projeto</h1>
+              <p class="mb-0">Projeto Integrador do 5 semestre de Big Data focado em IOT e análise de dados.</p>
             </div>
           </div>
         </div>
@@ -79,73 +79,109 @@
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Projetos</li>
+            <li class="current"><a href="portfolio.html" style="color:white;">Projetos</a></li>
           </ol>
         </div>
       </nav>
     </div><!-- End Page Title -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
 
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="row gy-4">
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">Todos</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-automacao">Automação</li>
-            <li data-filter=".filter-ia">IA</li>
-            <li data-filter=".filter-analise">Análise</li>
-          </ul><!-- End Portfolio Filters -->
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-automacao filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/selenium2.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App/Automação</h4>
-                  <p>Projeto Selenium</p>
-                  <a href="assets/img/portfolio/selenium2.png" title="Projeto Selenium" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="Mais detalhes" class="details-link"><i class="bi bi-info-lg"></i></a>
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/iot.png" alt="">
                 </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/iot2.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/iot3.jpg" alt="">
+                </div>
+
               </div>
-            </div><!-- End Portfolio Item -->
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
 
-            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Informações</h3>
+              <ul>
+                <li><strong>Categoria</strong>: IOT</li>
+                <li><strong>Funções</strong>: IOT, Arduino, ETL e Dash</li>
+                <li><strong>Data</strong>: Novembro, 2024</li>
+                <li><strong>URL</strong>: <a href="https://github.com/nyudji/fatec_projeto_integrador_v">GitHub</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Projeto IOT - Diganóstico de motores</h2>
+              <p>Este projeto foi desenvolvido como parte do <strong>Projeto Integrador do 5º semestre de Big Data</strong>, com foco em <strong>IoT e análise de dados</strong>. A solução propõe o monitoramento de motores por meio de sensores de vibração conectados a um <strong>ESP32</strong>, permitindo a coleta contínua de dados para análise em tempo real.</p>
 
-              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-automacao filter-ia filter-analise">
-                <div class="portfolio-content h-100">
-                  <img src="assets/img/portfolio/iot.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>IOT/Análise</h4>
-                    <p>Projeto IOT - Diagnóstico de Motores</p>
-                    <a href="assets/img/portfolio/iot3.jpg" title="Projeto IOT - Diagnóstico de Motores" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                    <a href="portfolio-details2.html" title="Mais detalhes" class="details-link"><i class="bi bi-info-lg"></i></a>
-                  </div>
-                </div>
-              </div><!-- End Portfolio Item -->
+              <p>Utilizando o cálculo de <strong>RMS (Root Mean Square)</strong>, é possível diagnosticar falhas mecânicas iminentes, como desalinhamentos e desgastes, possibilitando uma manutenção preditiva mais eficiente.</p>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/embreve.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Em breve</h4>
-                  <p>Em breve mais projetos</p>
-                  <a  title="Em breve" data-gallery="portfolio-gallery-product" class="glightbox preview-link"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
+              <h3>Benefícios da Solução:</h3>
+              <ul style="list-style: none;">
+                  <li>✅ Identificação antecipada de falhas mecânicas</li>
+                  <li>✅ Redução de custos com manutenção corretiva</li>
+                  <li>✅ Prevenção de paradas inesperadas</li>
+                  <li>✅ Aumento da vida útil dos equipamentos</li>
+                  <li>✅ Maior eficiência e confiabilidade na gestão de bombeamento</li>
+              </ul>
 
-          </div><!-- End Portfolio Container -->
+              <h3>Ferramentas Utilizadas:</h3>
+              <ul style="list-style: none;">
+                  <li>🔹 <strong>Python</strong> – Processamento de dados</li>
+                  <li>🔹 <strong>Arduino</strong> – Programação do ESP32</li>
+                  <li>🔹 <strong>Streamlit</strong> – Dashboard para visualização dos dados</li>
+                  <li>🔹 <strong>MQTTClient (Mobile)</strong> – Comunicação dos sensores</li>
+                  <li>🔹 <strong>Eclipse Mosquitto</strong> – Broker MQTT</li>
+                  <li>🔹 <strong>PostgreSQL</strong> – Armazenamento e consulta dos dados</li>
+              </ul>
+
+              <h3>Principais Funcionalidades:</h3>
+              <ul style="list-style: none;">
+                  <li>📌 <strong>Leitura de sensores MPU</strong> (giroscópio e temperatura)</li>
+                  <li>📌 <strong>Cálculo de RMS</strong> para análise de vibração</li>
+                  <li>📌 <strong>Monitoramento de dados em tempo real</strong></li>
+                  <li>📌 <strong>Armazenamento de logs</strong> em arquivos <code>.txt</code> e banco de dados SQL</li>
+              </ul>
+
+              <p>Com essa solução, promovemos maior eficiência, confiabilidade e sustentabilidade na manutenção de motores de bombas d'água, reduzindo custos e otimizando operações.</p>
+            </div>
+          </div>
 
         </div>
 
       </div>
 
-    </section><!-- /Portfolio Section -->
+    </section><!-- /Portfolio Details Section -->
 
   </main>
 
